@@ -1,0 +1,42 @@
+@mixin mq($screen, $min: false) {
+	@if ($min) {
+		@media (min-width: #{$screen}px) {
+			@content;
+		}
+	} @else {
+		@media (max-width: #{$screen}px) {
+			@content;
+		}
+	}
+}
+
+@function clr($name) {
+	@return map-get($colors, $name);
+}
+
+@mixin fz($max-font, $min-font) {
+	font-size: calc(
+		#{$min-font}px + (#{$max-font} - #{$min-font}) * (100vw - 320px) /
+			(1920 - 320)
+	);
+}
+
+@mixin list-reset(
+	$padding-left: 0,
+	$margin-top: 0,
+	$margin-bottom: 0,
+	$list-style: none
+) {
+	padding-left: $padding-left;
+	margin-top: $margin-top;
+	margin-bottom: $margin-bottom;
+	list-style-type: $list-style;
+}
+
+%placeholder {
+	color: clr(grey-stroke);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%;
+}

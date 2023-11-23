@@ -1,0 +1,160 @@
+.reliability {
+	background-color: #ececec;
+	padding-top: 80px;
+	padding-bottom: 140px;
+
+	@include mq(768) {
+		padding-bottom: 40px;
+	}
+}
+
+.reliability__container {
+	position: relative;
+}
+
+.reliability__title {
+	@include fz(44, 28);
+	font-weight: 800;
+	line-height: 100%;
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.reliability__subtitle {
+	color: clr(grey-txt);
+	@include fz(20, 16);
+	line-height: 140%;
+	margin-top: 0;
+	margin-bottom: 60px;
+	max-width: 670px;
+}
+
+.reliability__points {
+	@include list-reset;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas:
+		"item1 item2 ."
+		"item3 item4 item5";
+	gap: 50px 100px;
+
+	counter-reset: reliabilities;
+
+	@include mq(1200) {
+		gap: 30px 50px;
+	}
+	@include mq(992) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			"item1 item2 "
+			"item3 item4 "
+			"item5 .";
+	}
+	@include mq(768) {
+		grid-template-columns: 100%;
+		grid-template-areas:
+			"item1"
+			"item2"
+			"item3"
+			"item4"
+			"item5";
+	}
+}
+
+.reliability__point {
+	@for $i from 1 through 5 {
+		&:nth-child(#{$i}) {
+			grid-area: item#{$i};
+		}
+	}
+
+	display: grid;
+	counter-increment: reliabilities;
+
+	&::before {
+		content: counter(reliabilities, decimal-leading-zero);
+		background-image: url(../images/icons/rectangle.svg);
+		background-size: 16px 24px;
+		background-repeat: no-repeat;
+		background-position: left center;
+		padding-left: 26px;
+
+		@include fz(30, 20);
+		font-weight: 800;
+		line-height: 120%;
+	}
+}
+
+.reliability__point-title {
+	margin-top: 35px;
+	margin-bottom: 20px;
+
+	@include fz(20, 18);
+	font-weight: 800;
+	line-height: 120%;
+
+	@include mq(992) {
+		margin-top: 25px;
+	}
+	@include mq(768) {
+		margin-top: 16px;
+		margin-bottom: 10px;
+	}
+}
+
+.reliability__point-text {
+	margin-top: 0;
+	margin-bottom: 0;
+
+	color: clr(grey-txt);
+	@include fz(16, 14);
+	font-weight: 400;
+	line-height: 160%;
+}
+
+.reliability__order-block {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 247px 84px 40px;
+	background-image: url(../images/containers.jpg);
+	background-size: cover;
+
+	@include mq(1200) {
+		padding: 200px 60px 40px;
+	}
+	@include mq(992) {
+		top: calc(100% - 180px);
+		right: 40px;
+	}
+	@include mq(768) {
+		position: static;
+		max-width: 280px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 40px;
+
+		padding: 200px 30px 20px;
+	}
+}
+
+.reliability__order-btn {
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	column-gap: 15px;
+	cursor: pointer;
+
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 100%;
+
+	@include mq(768) {
+		& svg {
+			width: 40px;
+			height: 40px;
+		}
+	}
+}

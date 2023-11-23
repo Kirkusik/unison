@@ -1,0 +1,21 @@
+.truck-slider {
+}
+
+.truck-slider__wrapper {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style-type: none;
+
+	transition-timing-function: linear !important;
+}
+
+.truck-slider__item {
+	// width: max-content;
+	opacity: 0;
+	transition: opacity 0.5s;
+
+	&.swiper-slide-visible {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,151 @@
+.excellents {
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	@include mq(992) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	@include mq(768) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	@include mq(576) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+
+.excellents__container {
+	display: grid;
+	grid-template-columns: 780px 1fr;
+	column-gap: 60px;
+
+	@include mq(1366) {
+		grid-template-columns: 3fr 2fr;
+	}
+	@include mq(992) {
+		grid-template-columns: 100%;
+		row-gap: 40px;
+	}
+}
+
+.excellents__img {
+	object-fit: cover;
+
+	@include mq(992) {
+		width: auto;
+		height: 400px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include mq(576) {
+		height: 280px;
+	}
+}
+
+.excellents__wrapper {
+	border-right: 1px solid #000;
+	padding-right: 60px;
+
+	position: relative;
+
+	@include mq(992) {
+		border: none;
+		padding-right: 0;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 110px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: #000;
+
+		@include mq(992) {
+			content: none;
+		}
+	}
+}
+
+.excellents__title {
+	@include fz(44, 28);
+	font-weight: 800;
+	line-height: 100%;
+	margin-top: 0;
+	margin-bottom: 60px;
+
+	@include mq(768) {
+		margin-bottom: 40px;
+	}
+}
+
+.excellents__list {
+	padding-left: 0;
+	padding-bottom: 30px;
+	margin-top: 0;
+	margin-bottom: 30px;
+	list-style-type: none;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
+
+	@include mq(992) {
+		border-bottom: 1px solid #000;
+	}
+	@include mq(576) {
+		grid-template-columns: 100%;
+	}
+}
+
+.excellents__item-title {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	margin-top: 0;
+	margin-bottom: 10px;
+
+	@include fz(20, 16);
+	font-weight: 800;
+	line-height: 120%;
+}
+
+.excellents__item-icon {
+	@include mq(576) {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.excellents__item-text {
+	color: clr(grey-txt);
+	@include fz(16, 14);
+	font-weight: 400;
+	line-height: 160%;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.excelelnts__order {
+	display: flex;
+	align-items: center;
+	column-gap: 15px;
+	border: none;
+	background-color: transparent;
+
+	color: #000;
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 100%;
+	cursor: pointer;
+
+	@include mq(576) {
+		& svg {
+			width: 40px;
+			height: 40px;
+		}
+	}
+}
