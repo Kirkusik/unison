@@ -12,10 +12,21 @@
 
 .truck-slider__item {
 	// width: max-content;
-	opacity: 0;
-	transition: opacity 0.5s;
+	display: flex;
+	align-items: flex-end;
+	height: auto;
 
-	&.swiper-slide-visible {
-		opacity: 1;
+	@include mq(768, true) {
+		opacity: 0;
+		transition: opacity 0.5s;
+
+		&.swiper-slide-visible {
+			opacity: 1;
+		}
 	}
+}
+
+.truck-slider__img {
+	max-width: 100%;
+	height: auto;
 }

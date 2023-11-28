@@ -1,31 +1,37 @@
 .services {
 	background-color: #dfdfdf;
+	padding-top: 1px;
 }
 
 .service {
 	background-position: left 80px center;
-	background-size: auto 460px;
+	background-size: 460px auto;
 	background-repeat: no-repeat;
 
 	padding-top: 100px;
 	padding-bottom: 100px;
 
 	@include mq(1680) {
-		background-position: left center;
-		background-size: auto 400px;
+		background-size: 400px auto;
 	}
 	@include mq(1540) {
-		background-size: auto 380px;
+		background-position: left 60px center;
 	}
 	@include mq(1366) {
-		background-size: auto 360px;
-		background-position: left top;
+		background-size: 360px auto;
+		background-position: left top 70px;
 	}
 	@include mq(1200) {
-		background-size: auto 300px;
+		background-size: 300px auto;
 	}
 	@include mq(992) {
-		background-size: auto 240px;
+		padding-bottom: 40px;
+		background-position: left 30px top 30px;
+		background-size: 240px auto;
+	}
+	@include mq(768) {
+		background-position: left top 30px;
+		padding-bottom: 40px;
 	}
 }
 

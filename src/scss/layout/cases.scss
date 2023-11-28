@@ -156,11 +156,14 @@
 	}
 
 	@include mq(1680) {
-		padding: 480px 100px 80px;
+		padding: 480px 80px 60px;
+	}
+	@include mq(1540) {
+		padding: 380px 100px 80px;
 	}
 	@include mq(1366) {
-		padding-left: 80px;
-		padding-right: 80px;
+		padding-left: 70px;
+		padding-right: 70px;
 	}
 	@include mq(1200) {
 		padding-left: 50px;
@@ -242,7 +245,7 @@
 
 .case__details {
 	display: none;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -256,7 +259,7 @@
 		padding: 60px;
 	}
 	@include mq(576) {
-		padding: 40px 20px;
+		padding: 60px 20px 40px;
 	}
 
 	&--visible {
@@ -266,16 +269,16 @@
 
 .cases__more-close {
 	position: absolute;
-	right: 20px;
-	top: 20px;
+	right: 30px;
+	top: 30px;
 	padding: 0;
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
 
 	@include mq(576) {
-		top: 10px;
-		right: 10px;
+		top: 20px;
+		right: 20px;
 
 		& svg {
 			width: 30px;

@@ -9,8 +9,8 @@ export default function createTruckSlider(Swiper) {
 function truckSliderInit(truckSlider, Swiper) {
 	if (truckSlider) {
 		const swiper = new Swiper(truckSlider, {
-			spaceBetween: 100,
-			slidesPerView: 5,
+			spaceBetween: 40,
+			slidesPerView: 2,
 			speed: 3000,
 			loop: true,
 			centeredSlides: true,
@@ -32,12 +32,12 @@ function truckSliderInit(truckSlider, Swiper) {
 				// when window width is >= 320px
 				320: {
 					slidesPerView: 2,
-					spaceBetween: 20,
+					spaceBetween: 40,
 				},
 				// when window width is >= 480px
 				992: {
 					spaceBetween: 40,
-					slidesPerView: 3,
+					slidesPerView: 4,
 				},
 				// when window width is >= 640px
 				1200: {

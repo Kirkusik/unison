@@ -1,0 +1,235 @@
+.pop-up {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba($color: #000000, $alpha: 0.6);
+	z-index: 99;
+
+	display: none;
+
+	&--active {
+		display: flex;
+	}
+
+	& .wpcf7-response-output {
+		color: #fff !important;
+	}
+
+	& form {
+		margin: auto;
+		max-height: calc(100vh - 40px);
+		max-width: 830px;
+		overflow-y: auto;
+		background-color: clr(dark);
+		padding: 70px;
+		display: grid;
+		position: relative;
+
+		@include mq(1540) {
+			padding: 50px;
+		}
+		@include mq(1366) {
+			padding: 40px;
+		}
+		@include mq(992) {
+			width: calc(100vw - 20px);
+			max-height: calc(100vh - 20px);
+		}
+		@include mq(480) {
+			padding: 60px 20px 20px;
+		}
+	}
+
+	& .form__label {
+		color: clr(white);
+
+		&:not(:last-child) {
+			margin-bottom: 50px;
+
+			@include mq(1540) {
+				margin-bottom: 40px;
+			}
+			@include mq(1366) {
+				margin-bottom: 30px;
+			}
+			@include mq(480) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	& .form__element {
+		color: clr(white);
+
+		&::-webkit-input-placeholder {
+			@extend %placeholder;
+			color: clr(light-grey-text);
+		}
+		&::-moz-placeholder {
+			@extend %placeholder;
+			color: clr(light-grey-text);
+		}
+		&:-ms-input-placeholder {
+			@extend %placeholder;
+			color: clr(light-grey-text);
+		}
+		&:-moz-placeholder {
+			@extend %placeholder;
+			color: clr(light-grey-text);
+		}
+	}
+}
+
+// ? FORM POP UP
+
+.pop-up-form {
+	& > div {
+		margin: auto;
+	}
+}
+
+.pop-up-close {
+	position: absolute;
+	right: 20px;
+	top: 2dvh;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	cursor: pointer;
+
+	@include mq(1540) {
+		& svg {
+			width: 40px;
+			height: 40px;
+		}
+	}
+}
+
+.form__title {
+	color: clr(white);
+	@include fz(40, 24);
+	font-weight: 800;
+	line-height: 100%;
+
+	margin-top: 0;
+	margin-bottom: 30px;
+
+	@include mq(480) {
+		margin-bottom: 20px;
+	}
+}
+
+.form__subtitle {
+	color: clr(light-grey-text);
+	@include fz(18, 14);
+	line-height: 140%;
+	margin-top: 0;
+	margin-bottom: 60px;
+
+	@include mq(1540) {
+		margin-bottom: 60px;
+	}
+	@include mq(1366) {
+		margin-bottom: 40px;
+	}
+}
+
+// ? INFO POP UP
+.pop-up-info {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba($color: #000000, $alpha: 0.6);
+	z-index: 98;
+
+	display: none;
+
+	&--active {
+		display: flex;
+	}
+}
+
+.pop-up-info__body {
+	padding: 60px 30px 40px;
+	background-color: clr(dark);
+
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	justify-content: space-evenly;
+	column-gap: 80px;
+	margin: auto;
+
+	position: relative;
+
+	@include mq(1200) {
+		max-width: 800px;
+		width: 100%;
+	}
+	@include mq(992) {
+		width: calc(100vw - 20px);
+	}
+
+	@include mq(480) {
+		column-gap: 30px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.pop-up-info-close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	padding: 0;
+	border: none;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.pop-up-info__title {
+	font-size: 20px;
+	@include fz(24, 16);
+	font-weight: 700;
+	color: clr(yellow);
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+.pop-up-info__list {
+	padding-left: 0;
+	margin: 0;
+	list-style-type: none;
+
+	display: grid;
+	row-gap: 10px;
+	text-align: center;
+}
+
+.pop-up-info__link {
+	text-transform: uppercase;
+	color: clr(white);
+	transition: color 0.5s;
+	@include fz(20, 14);
+
+	&:hover {
+		color: clr(yellow);
+	}
+
+	&--main {
+		@include fz(28, 18);
+		display: grid;
+
+		& span {
+			font-size: 0.5em;
+			opacity: 0.6;
+			line-height: 1.1;
+		}
+	}
+}

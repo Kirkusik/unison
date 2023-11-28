@@ -63,7 +63,7 @@
 .fixed-btn {
 	position: fixed;
 	right: 20px;
-	bottom: 150px;
+	bottom: 100px;
 	width: 60px;
 	height: 60px;
 	z-index: 1;
@@ -86,22 +86,22 @@
 		margin: auto;
 	}
 
-	@include mq(1200) {
-		width: 50px;
-		height: 50px;
+	// @include mq(1200) {
+	// 	width: 50px;
+	// 	height: 50px;
 
-		& svg {
-			width: 24px;
-			height: 24px;
-		}
-	}
+	// 	& svg {
+	// 		width: 24px;
+	// 		height: 24px;
+	// 	}
+	// }
 
-	&--yellow {
-		background-color: #f8c500;
-		border: 2px solid clr(dark);
-		bottom: 230px;
-		animation: hoverWaveY linear 1s infinite;
-	}
+	// &--yellow {
+	// 	background-color: #f8c500;
+	// 	border: 2px solid clr(dark);
+	// 	bottom: 230px;
+	// 	animation: hoverWaveY linear 1s infinite;
+	// }
 
 	&--mail {
 		@include mq(1200) {
@@ -111,7 +111,6 @@
 
 	&--info {
 		display: none;
-		bottom: 150px;
 
 		@include mq(1200) {
 			display: flex;

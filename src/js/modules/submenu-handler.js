@@ -20,8 +20,7 @@ export default function submenuHandler() {
 					"click",
 					() => {
 						const pageNav = document.querySelector(".page-header__nav");
-						pageNav.style.display =
-							pageNav.style.display === "none" ? "block" : "none";
+						pageNav.classList.remove("page-header__nav--block");
 
 						setTimeout(() => {
 							pageNav.classList.remove("page-header__nav--visible");
@@ -30,7 +29,7 @@ export default function submenuHandler() {
 						submenu.classList.remove("sub-menu--active");
 						menuItem.classList.remove("menu-item-has-children--open");
 						menuWrapper.classList.remove("header-menu-wrapper--active");
-						document.body.classList.remove("page__body--no-scroll");
+						// document.body.classList.remove("page__body--no-scroll");
 					},
 					{ once: true }
 				);

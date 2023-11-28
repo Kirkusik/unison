@@ -1,16 +1,55 @@
 <header class="page__header page-header" id="page-header">
 	<div class="container page-header__container">
 		<a href="#" class="page-header__logo logo">
-			<img
-				src="./images/logo-unison.svg"
-				alt="Логістична компанія Unison"
-				class="logo__img"
-				width="215"
-				height="51"
-			/>
+			<picture class="logo__img-wrapper">
+				<source
+					media="(max-width: 576px)"
+					srcset="./images/logo-unison-mobile.svg"
+				/>
+				<source media="(min-width: 577px)" srcset="./images/logo-unison.svg" />
+				<img
+					src="./images/logo-unison-mobile.svg"
+					alt="Логістична компанія Unison"
+					class="logo__img"
+					width="215"
+					height="51"
+				/>
+			</picture>
 		</a>
+		<button class="main-nav-toggle" type="button">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="29"
+				height="30"
+				viewBox="0 0 29 30"
+				fill="none"
+			>
+				<rect y="0.5" width="7" height="7" fill="#FFC825" />
+				<rect y="11.5" width="7" height="7" fill="#FFC825" />
+				<rect y="22.5" width="7" height="7" fill="#FFC825" />
+				<rect x="11" y="0.5" width="7" height="7" fill="#FFC825" />
+				<rect x="11" y="11.5" width="7" height="7" fill="#FFC825" />
+				<rect x="11" y="22.5" width="7" height="7" fill="#FFC825" />
+				<rect x="22" y="0.5" width="7" height="7" fill="#FFC825" />
+				<rect x="22" y="11.5" width="7" height="7" fill="#FFC825" />
+				<rect x="22" y="22.5" width="7" height="7" fill="#FFC825" />
+			</svg>
+			<!-- <span> Меню </span> -->
+		</button>
 
-		<button class="page-header__order order-pop-up" type="button">
+		<button
+			class="order-vacancy order-pop-up"
+			type="button"
+			data-target="pop-up-vacancy"
+		>
+			вакансії
+		</button>
+
+		<button
+			class="page-header__order order-pop-up"
+			type="button"
+			data-target="pop-up-form"
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -32,11 +71,11 @@
 		H64z"
 				/>
 			</svg>
-			<span>Залишити заявку</span>
+			<span class="page-header__order-text">Залишити заявку</span>
 		</button>
 
 		<div class="header-menu-wrapper">
-			<nav class="page-header__nav" style="display: none">
+			<nav class="page-header__nav">
 				<ul class="page-header__menu main-menu">
 					<li class="main-menu__item menu-item-has-children">
 						<a href="#" class="main-menu__link main-menu__link--current">
@@ -105,25 +144,5 @@
 				<a class="page-header__tel" href="tel:+34045656767">+380 73 030 2011</a>
 			</div>
 		</div>
-		<button class="main-nav-toggle" type="button">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="29"
-				height="30"
-				viewBox="0 0 29 30"
-				fill="none"
-			>
-				<rect y="0.5" width="7" height="7" fill="#FFC825" />
-				<rect y="11.5" width="7" height="7" fill="#FFC825" />
-				<rect y="22.5" width="7" height="7" fill="#FFC825" />
-				<rect x="11" y="0.5" width="7" height="7" fill="#FFC825" />
-				<rect x="11" y="11.5" width="7" height="7" fill="#FFC825" />
-				<rect x="11" y="22.5" width="7" height="7" fill="#FFC825" />
-				<rect x="22" y="0.5" width="7" height="7" fill="#FFC825" />
-				<rect x="22" y="11.5" width="7" height="7" fill="#FFC825" />
-				<rect x="22" y="22.5" width="7" height="7" fill="#FFC825" />
-			</svg>
-			<!-- <span> Меню </span> -->
-		</button>
 	</div>
 </header>

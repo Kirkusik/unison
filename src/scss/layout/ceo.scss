@@ -19,6 +19,7 @@
 .ceo__container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	align-items: end;
 	column-gap: 150px;
 
 	@include mq(1200) {
@@ -52,7 +53,7 @@
 
 .ceo__cite {
 	padding-top: 50px;
-
+	padding-bottom: 20px;
 	margin: 0;
 
 	@include mq(1200) {

@@ -3,36 +3,36 @@ export default function caseDetailsHandler() {
 
 	caseMorebtns.forEach((btn) => {
 		btn.addEventListener("click", () => {
-			const caseDetailsBlock = btn
-				.closest(".cases__item")
-				.querySelector(".case__details");
+			const caseDetailsID = btn.dataset.details;
+			const caseDetailsBlock = document.querySelector(`#${caseDetailsID}`);
 
 			caseDetailsBlock.classList.add("case__details--visible");
+			document.body.classList.toggle("page__body--no-scroll");
 
-			caseDetailsBlock
+			btn
 				.closest(".swiper")
 				.querySelector(".swiper-button-prev").style.display = "none";
-			caseDetailsBlock
+			btn
 				.closest(".swiper")
 				.querySelector(".swiper-button-next").style.display = "none";
-			caseDetailsBlock
-				.closest(".swiper")
-				.querySelector(".swiper-pagination").style.display = "none";
+			btn.closest(".swiper").querySelector(".swiper-pagination").style.display =
+				"none";
 
 			caseDetailsBlock.querySelector(".cases__more-close").addEventListener(
 				"click",
 				() => {
 					caseDetailsBlock.classList.remove("case__details--visible");
 
-					caseDetailsBlock
+					btn
 						.closest(".swiper")
 						.querySelector(".swiper-button-prev").style.display = "block";
-					caseDetailsBlock
+					btn
 						.closest(".swiper")
 						.querySelector(".swiper-button-next").style.display = "block";
-					caseDetailsBlock
+					btn
 						.closest(".swiper")
 						.querySelector(".swiper-pagination").style.display = "block";
+					document.body.classList.toggle("page__body--no-scroll");
 				},
 				{ once: true }
 			);

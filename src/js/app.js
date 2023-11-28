@@ -12,10 +12,10 @@ import caseDetailsHandler from "./modules/case-details-toggle.js";
 Swiper.use([Navigation, Pagination, Autoplay, EffectFade]);
 
 import AOS from "aos";
-import popUpHandler from "./modules/pop-up-hanler.js";
+import popUpHandler from "./modules/pop-up-handler.js";
 import createPartnersSlider from "./modules/partners-slider.js";
 import submenuHandler from "./modules/submenu-handler.js";
-import popUpInfoHandler from "./modules/pop-up-info-handler.js";
+
 // import Inputmask from "inputmask";
 
 // Проверка браузера на поддерку .webp изображений ====================================================================================================================================================
@@ -23,34 +23,37 @@ isWebp();
 // ====================================================================================================================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-	menuToogleHandler();
-	createHeroSlider(Swiper);
-	createTruckSlider(Swiper);
-	createCaseSlider(Swiper);
-	truckTypeToggle();
-	caseDetailsHandler();
-	createPartnersSlider(Swiper);
-	window.addEventListener("resize", () => createPartnersSlider(Swiper));
-	popUpHandler();
-	popUpInfoHandler();
+	try {
+		menuToogleHandler();
+		createHeroSlider(Swiper);
+		createTruckSlider(Swiper);
+		createCaseSlider(Swiper);
+		truckTypeToggle();
+		caseDetailsHandler();
+		createPartnersSlider(Swiper);
+		window.addEventListener("resize", () => createPartnersSlider(Swiper));
+		popUpHandler();
 
-	submenuHandler();
+		submenuHandler();
 
-	window.addEventListener("scroll", () => {
-		const header = document.querySelector(".page-header");
+		window.addEventListener("scroll", () => {
+			const header = document.querySelector(".page-header");
 
-		if (
-			window.scrollY > 500 &&
-			!header.classList.contains("page-header--scrolled")
-		) {
-			header.classList.add("page-header--scrolled");
-		} else if (
-			window.scrollY <= 500 &&
-			header.classList.contains("page-header--scrolled")
-		) {
-			header.classList.remove("page-header--scrolled");
-		}
-	});
+			if (
+				window.scrollY > 500 &&
+				!header.classList.contains("page-header--scrolled")
+			) {
+				header.classList.add("page-header--scrolled");
+			} else if (
+				window.scrollY <= 500 &&
+				header.classList.contains("page-header--scrolled")
+			) {
+				header.classList.remove("page-header--scrolled");
+			}
+		});
 
-	AOS.init({ duration: 600 });
+		AOS.init({ duration: 600, offset: 30 });
+	} catch (e) {
+		console.log(e.message);
+	}
 });
