@@ -132,7 +132,7 @@
 }
 
 .case {
-	padding: 542px 120px 80px;
+	padding: 460px 120px 80px;
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
@@ -156,18 +156,18 @@
 	}
 
 	@include mq(1680) {
-		padding: 480px 80px 60px;
+		padding: 400px 80px 60px;
 	}
 	@include mq(1540) {
-		padding: 380px 100px 80px;
+		padding: 340px 100px 80px;
 	}
 	@include mq(1366) {
 		padding-left: 70px;
 		padding-right: 70px;
 	}
 	@include mq(1200) {
-		padding-left: 50px;
-		padding-right: 50px;
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 	@include mq(992) {
 		padding-top: 400px;
@@ -248,22 +248,32 @@
 	position: fixed;
 	left: 0;
 	top: 0;
-	width: 100%;
-	height: 100%;
-	padding: 80px 120px 50px;
-	background-color: #272727;
-	overflow-y: auto;
+	right: 0;
+	bottom: 0;
+	background-color: rgba($color: #000000, $alpha: 0.6);
+
 	z-index: 33;
+
+	&--visible {
+		display: flex;
+	}
+}
+
+.case-details-body {
+	padding: 80px 100px;
+	margin: auto;
+	background-color: #272727;
+	width: 80%;
+	min-height: 70vh;
+	max-height: calc(100vh - 100px);
+	overflow-y: auto;
+	position: relative;
 
 	@include mq(992) {
 		padding: 60px;
 	}
 	@include mq(576) {
 		padding: 60px 20px 40px;
-	}
-
-	&--visible {
-		display: block;
 	}
 }
 

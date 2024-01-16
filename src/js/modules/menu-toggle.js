@@ -5,6 +5,7 @@ export default function menuToogleHandler() {
 
 	document.addEventListener("click", (evt) => {
 		if (
+			window.innerWidth >= 1080 &&
 			!evt.target.closest(".page-header__nav") &&
 			pageNav.classList.contains("page-header__nav--visible") &&
 			evt.target !== menuToggleBtn
@@ -34,7 +35,7 @@ export default function menuToogleHandler() {
 				menuWrapper.style.zIndex = "-2";
 			}
 
-			document.body.classList.toggle("page__body--no-scroll");
+			// document.body.classList.add("page__body--no-scroll");
 		}
 
 		pageNav.addEventListener(
@@ -43,7 +44,7 @@ export default function menuToogleHandler() {
 				const target = evt.target.closest(".main-menu > li > a");
 
 				if (target && !target.closest("li").querySelector(".sub-menu")) {
-					document.body.classList.remove("page__body--no-scroll");
+					// document.body.classList.remove("page__body--no-scroll");
 					menuWrapper.classList.remove("header-menu-wrapper--active");
 
 					pageNav.classList.toggle("page-header__nav--block");
@@ -52,9 +53,9 @@ export default function menuToogleHandler() {
 						pageNav.classList.remove("page-header__nav--visible");
 					}, 200);
 
-					if (window.innerWidth < 992) {
-						document.body.classList.toggle("page__body--no-scroll");
-					}
+					// if (window.innerWidth < 1080) {
+					// 	document.body.classList.remove("page__body--no-scroll");
+					// }
 				}
 			},
 			{ once: true }

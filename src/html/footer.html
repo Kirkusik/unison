@@ -1,12 +1,144 @@
 <footer class="footer">
 	<div class="container footer__container">
-		<img
-			src="./images/logo-unison.svg"
-			alt="Логістична компанія Unison"
-			class="footer__logo"
-			width="215"
-			height="51"
-		/>
+		<div class="footer__wrapper">
+			<img
+				src="./images/logo-unison.svg"
+				alt="Логістична компанія Unison"
+				class="footer__logo"
+				width="215"
+				height="51"
+			/>
+			<section class="contact__socials">
+				<p class="contacts__block-title contacts__block-title--footer">
+					Ми в мережі
+				</p>
+
+				<ul class="contact__socials-list">
+					<li class="contact__socials-item">
+						<a
+							href="#"
+							class="contact__socials-link contact__socials-link--footer"
+							title="instagramm"
+						>
+							<img
+								class="contact__socials-icon"
+								src="./images/icons/socials/instagram-white.svg"
+								alt=""
+								height="32"
+							/>
+							instagram
+						</a>
+					</li>
+					<li class="contact__socials-item">
+						<a
+							href="#"
+							class="contact__socials-link contact__socials-link--footer"
+							title="facebook"
+						>
+							<img
+								class="contact__socials-icon"
+								src="./images/icons/socials/facebook-white.svg"
+								alt=""
+								height="32"
+							/>
+							facebook
+						</a>
+					</li>
+					<li class="contact__socials-item">
+						<a
+							href="#"
+							class="contact__socials-link contact__socials-link--footer"
+							title="linkedIn"
+						>
+							<img
+								class="contact__socials-icon"
+								src="./images/icons/socials/linkedin-white.svg"
+								alt=""
+								height="32"
+							/>
+							linkedin
+						</a>
+					</li>
+					<li class="contact__socials-item">
+						<a
+							href="#"
+							class="contact__socials-link contact__socials-link--footer"
+						>
+							<img
+								class="contact__socials-icon"
+								src="./images/icons/socials/work-ua-job-white.svg"
+								alt=""
+								height="32"
+							/>
+							work ua
+						</a>
+					</li>
+					<li class="contact__socials-item">
+						<a
+							href="#"
+							class="contact__socials-link contact__socials-link--footer"
+						>
+							<img
+								class="contact__socials-icon"
+								src="./images/icons/socials/robota-ua-white.svg"
+								alt=""
+								height="32"
+							/>
+							robota ua
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<section class="contacts__data">
+			<div class="contacts__data-phones">
+				<p class="contacts__block-title contacts__block-title--footer">
+					Телефони для зв’язку
+				</p>
+
+				<p class="contacts__item contacts__item--tel contacts__item--footer">
+					<a
+						href="tel:"
+						class="contacts__link contacts__link--tel contacts__link--main"
+					>
+						080 033 2011
+						<span>Безкоштовно по Україні</span>
+					</a>
+					<a href="tel:" class="contacts__link contacts__link--tel">
+						+380 68 030 2011
+					</a>
+					<a href="tel:" class="contacts__link contacts__link--tel">
+						+380 66 030 2011
+					</a>
+					<a href="tel:" class="contacts__link contacts__link--tel">
+						+380 73 030 2011
+					</a>
+				</p>
+			</div>
+
+			<div class="contacts__data-address">
+				<p class="contacts__block-title contacts__block-title--footer">
+					Адреса
+				</p>
+
+				<p class="contacts__item contacts__item--footer">
+					<a href="#" class="contacts__link">
+						місто Київ,<br />
+						вул. Івана Федорова, буд 26
+					</a>
+				</p>
+
+				<p class="contacts__block-title contacts__block-title--footer">
+					E-mail
+				</p>
+
+				<p class="contacts__item contacts__item--footer">
+					<a href="mailto:unisonlogistic@gmail.com" class="contacts__link">
+						unisonlogistic@gmail.com
+					</a>
+				</p>
+			</div>
+		</section>
 
 		<a
 			class="footer__map"
@@ -26,7 +158,8 @@
 
 <button
 	type="button"
-	class="show-pop-up-info fixed-btn fixed-btn--yellow fixed-btn--info"
+	class="order-pop-up fixed-btn fixed-btn--yellow fixed-btn--info"
+	data-target="pop-up-info"
 >
 	<span class="v-hidden">order form</span>
 

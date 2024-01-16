@@ -73,6 +73,10 @@
 	max-width: 600px;
 	grid-column: span 2;
 
+	&--footer {
+		color: clr(white);
+	}
+
 	@include mq(992) {
 		margin-bottom: 40px;
 	}
@@ -102,6 +106,10 @@
 	font-weight: 800;
 	line-height: 100%;
 
+	&--footer {
+		color: clr(white);
+	}
+
 	& a {
 		color: inherit;
 	}
@@ -118,6 +126,11 @@
 	font-weight: 400;
 	line-height: 160%;
 	margin-top: 0;
+
+	&--footer {
+		color: clr(white);
+		margin-top: 10px;
+	}
 }
 
 .contacts__link {
@@ -160,6 +173,10 @@
 	font-size: 18px;
 
 	transition: opacity 0.5s;
+
+	&--footer {
+		color: clr(white);
+	}
 
 	&:hover {
 		opacity: 0.8;
